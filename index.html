@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trader Beast - Dominate The Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0f14;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+padding:20px;
+text-align:center;
+z-index:1000;
+border-bottom:1px solid #00ff88;
+}
+
+header h1{
+color:#00ff88;
+letter-spacing:2px;
+}
+
+section{
+padding:120px 20px;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle at center,#00ff8820,transparent 70%);
+}
+
+.hero h2{
+font-size:55px;
+color:#00ff88;
+text-shadow:0 0 20px #00ff88;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px #00ff88;}
+to{text-shadow:0 0 30px #00ff88;}
+}
+
+.hero p{
+margin-top:20px;
+color:#ccc;
+font-size:18px;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 40px;
+background:#00ff88;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn:hover{
+background:#00ccff;
+box-shadow:0 0 25px #00ccff;
+transform:scale(1.05);
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#111;
+padding:30px;
+width:280px;
+border-radius:20px;
+border:1px solid #00ff8830;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00ff88;
+}
+
+.pricing{
+background:#0f141b;
+}
+
+.price-card{
+background:#111;
+padding:40px;
+border-radius:20px;
+display:inline-block;
+border:1px solid #00ccff50;
+box-shadow:0 0 20px #00ccff30;
+}
+
+footer{
+background:#000;
+padding:30px;
+color:#777;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>TRADER BEAST 🐉</h1>
+</header>
+
+<section class="hero">
+<h2>Dominate The Market</h2>
+<p>Elite Trading Signals • Smart Analysis • VIP Access</p>
+<a href="#pricing" class="btn">Join VIP Now</a>
+</section>
+
+<section>
+<h2 style="color:#00ccff;">🔥 Our Services</h2>
+<div class="cards">
+<div class="card">
+<h3>📊 Accurate Signals</h3>
+<p>High probability forex & crypto trades.</p>
+</div>
+<div class="card">
+<h3>📈 Market Analysis</h3>
+<p>Daily breakdown of market movements.</p>
+</div>
+<div class="card">
+<h3>🚀 VIP Community</h3>
+<p>Private group access with premium setups.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 style="color:#00ff88;">📉 Live Market Chart</h2>
+<div class="tradingview-widget-container">
+<div id="tradingview_chart"></div>
+<script src="https://s3.tradingview.com/tv.js"></script>
+<script>
+new TradingView.widget({
+"container_id": "tradingview_chart",
+"width": "100%",
+"height": 500,
+"symbol": "BINANCE:BTCUSDT",
+"interval": "60",
+"timezone": "Etc/UTC",
+"theme": "dark",
+"style": "1",
+"locale": "en",
+"toolbar_bg": "#0b0f14",
+"enable_publishing": false,
+"allow_symbol_change": true
+});
+</script>
+</div>
+</section>
+
+<section id="pricing" class="pricing">
+<h2 style="color:#00ccff;">💰 VIP Pricing</h2>
+<div class="price-card">
+<h3>VIP Membership</h3>
+<h1 style="color:#00ff88;">$49 / Month</h1>
+<p>✔ Premium Signals<br>
+✔ Daily Analysis<br>
+✔ Risk Management<br>
+✔ 24/7 Support</p>
+<a href="#" class="btn">Get Started</a>
+</div>
+</section>
+
+<section>
+<h2 style="color:#00ff88;">📢 Testimonials</h2>
+<p>"Best trading community I've ever joined!"</p>
+<p>"My consistency improved massively!"</p>
+</section>
+
+<section>
+<h2 style="color:#00ccff;">Join Our Telegram</h2>
+<a href="#" class="btn">Join Now</a>
+</section>
+
+<footer>
+© 2026 Trader Beast. All Rights Reserved.
+</footer>
+
+</body>
+</html>
